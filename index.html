@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#f8dce8">
+
+    <title>Para ti ❤️</title>
+
+
+    <style>
+
+        /* =====================================================
+           CONFIGURACIÓN GENERAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            color: #5d4552;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe3ed 0%,
+                    #fceaf2 45%,
+                    #e5f3ff 100%
+                );
+
+            overflow-x: hidden;
+
+        }
+
+
+        /* =====================================================
+           FONDO DECORATIVO
+        ===================================================== */
+
+        .background {
+
+            position: fixed;
+
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: 0;
+
+        }
+
+        .blur {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(70px);
+
+            opacity: 0.5;
+
+        }
+
+        .blur-1 {
+
+            width: 320px;
+            height: 320px;
+
+            background: #ffc5d9;
+
+            top: -130px;
+            left: -100px;
+
+        }
+
+        .blur-2 {
+
+            width: 360px;
+            height: 360px;
+
+            background: #c8e7ff;
+
+            bottom: -160px;
+            right: -120px;
+
+        }
+
+        .blur-3 {
+
+            width: 230px;
+            height: 230px;
+
+            background: #f4cce0;
+
+            top: 42%;
+            right: 8%;
+
+        }
+
+        .blur-4 {
+
+            width: 180px;
+            height: 180px;
+
+            background: #d6ebff;
+
+            bottom: 20%;
+            left: 5%;
+
+        }
+
+
+        /* =====================================================
+           CONTENEDOR PRINCIPAL
+        ===================================================== */
+
+        .page {
+
+            position: relative;
+
+            z-index: 1;
+
+            width: 100%;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px 15px;
+
+        }
+
+        .container {
+
+            width: 100%;
+
+            max-width: 980px;
+
+            padding: 45px;
+
+            border-radius: 35px;
+
+            background:
+                rgba(255,255,255,0.76);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.9);
+
+            box-shadow:
+                0 25px 70px
+                rgba(100,75,90,0.15);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+
+            text-align: center;
+
+        }
+
+        .intro-small {
+
+            font-size: 14px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: #9d7d8d;
+
+            margin-bottom: 12px;
+
+        }
+
+        .intro-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(26px, 4vw, 38px);
+
+            font-weight: normal;
+
+            color: #795467;
+
+            line-height: 1.3;
+
+        }
+
+
+        /* =====================================================
+           FOTOS
+        ===================================================== */
+
+        .photos {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+
+            margin-top: 38px;
+
+            margin-bottom: 45px;
+
+        }
+
+        .photo {
+
+            width: 165px;
+
+            height: 195px;
+
+            background: #dceeff;
+
+            padding:
+                9px
+                9px
+                30px
+                9px;
+
+            border-radius: 6px;
+
+            box-shadow:
+                0 12px 25px
+                rgba(80,60,75,0.16);
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+
+        }
+
+        .photo:nth-child(1) {
+            transform: rotate(-4deg);
+        }
+
+        .photo:nth-child(2) {
+            transform: rotate(3deg);
+        }
+
+        .photo:nth-child(3) {
+            transform: rotate(-2deg);
+        }
+
+        .photo:nth-child(4) {
+            transform: rotate(4deg);
+        }
+
+        .photo:hover {
+
+            transform:
+                translateY(-8px)
+                rotate(0deg)
+                scale(1.04);
+
+            box-shadow:
+                0 20px 35px
+                rgba(80,60,75,0.22);
+
+        }
+
+        .photo img {
+
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        /* =====================================================
+           PREGUNTA
+        ===================================================== */
+
+        #questionSection {
+
+            text-align: center;
+
+        }
+
+        .little-heart {
+
+            font-size: 28px;
+
+            color: #d783a1;
+
+            margin-bottom: 8px;
+
+        }
+
+        .question-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(48px, 8vw, 78px);
+
+            color: #d5799c;
+
+            line-height: 1.1;
+
+            margin-bottom: 18px;
+
+        }
+
+        .question-subtitle {
+
+            font-size: 18px;
+
+            color: #806875;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        /* =====================================================
+           ZONA DE BOTONES
+
+           IMPORTANTE:
+           Aquí los botones se superponen de verdad.
+        ===================================================== */
+
+        .buttons {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 230px;
+
+            margin-top: 5px;
+
+            overflow: visible;
+
+        }
+
+
+        /* =====================================================
+           BOTÓN SÍ
+
+           El tamaño se cambia físicamente.
+           No usamos scale().
+        ===================================================== */
+
+        .yes-button {
+
+            position: absolute;
+
+            left: 40%;
+
+            top: 50%;
+
+            width: 125px;
+
+            height: 58px;
+
+            transform:
+                translate(-50%, -50%);
+
+            z-index: 5;
+
+            border: none;
+
+            border-radius: 100px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e993b2,
+                    #d9789d
+                );
+
+            color: white;
+
+            font-size: 20px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            white-space: nowrap;
+
+            box-shadow:
+                0 10px 25px
+                rgba(210,110,145,0.30);
+
+            transition:
+                width 0.55s cubic-bezier(
+                    0.22,
+                    1,
+                    0.36,
+                    1
+                ),
+                height 0.55s cubic-bezier(
+                    0.22,
+                    1,
+                    0.36,
+                    1
+                ),
+                left 0.55s cubic-bezier(
+                    0.22,
+                    1,
+                    0.36,
+                    1
+                ),
+                top 0.55s cubic-bezier(
+                    0.22,
+                    1,
+                    0.36,
+                    1
+                );
+
+        }
+
+
+        /* =====================================================
+           BOTÓN NO
+        ===================================================== */
+
+        .no-button {
+
+            position: absolute;
+
+            left: 64%;
+
+            top: 50%;
+
+            width: 115px;
+
+            height: 52px;
+
+            transform:
+                translate(-50%, -50%);
+
+            z-index: 20;
+
+            border-radius: 100px;
+
+            border:
+                1px solid #ead7df;
+
+            background:
+                rgba(255,255,255,0.98);
+
+            color: #8b7480;
+
+            font-size: 18px;
+
+            cursor: pointer;
+
+            white-space: nowrap;
+
+            padding: 0;
+
+            transition:
+                width 0.55s cubic-bezier(
+                    0.22,
+                    1,
+                    0.36,
+                    1
+                ),
+                height 0.55s cubic-bezier(
+                    0.22,
+                    1,
+                    0.36,
+                    1
+                ),
+                left 0.55s cubic-bezier(
+                    0.22,
+                    1,
+                    0.36,
+                    1
+                ),
+                top 0.55s cubic-bezier(
+                    0.22,
+                    1,
+                    0.36,
+                    1
+                ),
+                font-size 0.55s ease,
+                opacity 0.55s ease;
+
+        }
+
+
+        /* =====================================================
+           MENSAJE DE LOS NO
+        ===================================================== */
+
+        .no-message {
+
+            min-height: 40px;
+
+            color: #c77b99;
+
+            font-size: 17px;
+
+            font-weight: 500;
+
+        }
+
+
+        /* =====================================================
+           CARTA
+        ===================================================== */
+
+        #letterSection {
+
+            display: none;
+
+            opacity: 0;
+
+            transform:
+                translateY(25px);
+
+            text-align: center;
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+
+        }
+
+        .letter-icon {
+
+            font-size: 60px;
+
+            margin-bottom: 12px;
+
+        }
+
+        .letter-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(36px, 6vw, 55px);
+
+            font-weight: normal;
+
+            color: #d5799c;
+
+            margin-bottom: 25px;
+
+        }
+
+        .letter {
+
+            max-width: 760px;
+
+            margin: auto;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fffdfd,
+                    #fff8fb
+                );
+
+            border:
+                1px solid #f1dce5;
+
+            border-radius: 25px;
+
+            padding: 38px;
+
+            text-align: left;
+
+            box-shadow:
+                0 15px 40px
+                rgba(110,80,95,0.10);
+
+            line-height: 1.9;
+
+            font-size: 18px;
+
+        }
+
+        .letter p {
+
+            margin-bottom: 17px;
+
+        }
+
+        .signature {
+
+            text-align: right;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 23px;
+
+            color: #c56f91;
+
+            margin-top: 28px;
+
+        }
+
+
+        /* =====================================================
+           BOTÓN SIGUIENTE
+        ===================================================== */
+
+        .next-button {
+
+            margin-top: 30px;
+
+            border: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #91c5e8,
+                    #77b4dd
+                );
+
+            color: white;
+
+            padding:
+                16px
+                38px;
+
+            border-radius: 100px;
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 25px
+                rgba(100,160,200,0.25);
+
+            transition:
+                transform 0.3s ease;
+
+        }
+
+        .next-button:hover {
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           CANCIÓN
+        ===================================================== */
+
+        #songSection {
+
+            display: none;
+
+            opacity: 0;
+
+            text-align: center;
+
+            padding:
+                30px 10px;
+
+            transition:
+                opacity 0.8s ease;
+
+        }
+
+        .song-heart {
+
+            font-size: 65px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .song-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(34px, 6vw, 52px);
+
+            font-weight: normal;
+
+            color: #d5799c;
+
+            margin-bottom: 12px;
+
+        }
+
+        .artist {
+
+            font-size: 18px;
+
+            color: #9a7b8a;
+
+            margin-bottom: 20px;
+
+        }
+
+        .song-text {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #76616d;
+
+        }
+
+        .song-button {
+
+            display: inline-block;
+
+            margin-top: 32px;
+
+            text-decoration: none;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e88caf,
+                    #d8799d
+                );
+
+            padding:
+                17px
+                35px;
+
+            border-radius: 100px;
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            box-shadow:
+                0 10px 25px
+                rgba(216,121,157,0.28);
+
+        }
+
+
+        /* =====================================================
+           CORAZONES
+        ===================================================== */
+
+        .floating-heart {
+
+            position: fixed;
+
+            pointer-events: none;
+
+            z-index: 100;
+
+            animation:
+                floatUp linear forwards;
+
+        }
+
+        @keyframes floatUp {
+
+            0% {
+
+                transform:
+                    translateY(30px)
+                    scale(0.7)
+                    rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+            20% {
+                opacity: 0.75;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    scale(1.2)
+                    rotate(25deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE - CELULAR
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            .page {
+
+                padding: 10px;
+
+                align-items:
+                    flex-start;
+
+            }
+
+            .container {
+
+                margin-top: 5px;
+
+                padding:
+                    30px 14px;
+
+                border-radius: 25px;
+
+            }
+
+            .intro-small {
+
+                font-size: 11px;
+
+                letter-spacing: 2px;
+
+            }
+
+            .intro-title {
+
+                font-size: 27px;
+
+            }
+
+            .photos {
+
+                gap: 14px;
+
+                margin-top: 28px;
+
+                margin-bottom: 38px;
+
+            }
+
+            .photo {
+
+                width: 125px;
+
+                height: 150px;
+
+                padding:
+                    7px
+                    7px
+                    23px
+                    7px;
+
+            }
+
+            .question-title {
+
+                font-size: 47px;
+
+            }
+
+            .question-subtitle {
+
+                font-size: 16px;
+
+                padding:
+                    0 10px;
+
+            }
+
+            /* ---------------------------------------------
+               BOTONES EN CELULAR
+            --------------------------------------------- */
+
+            .buttons {
+
+                height: 190px;
+
+            }
+
+            .yes-button {
+
+                left: 38%;
+
+                width: 105px;
+
+                height: 52px;
+
+                font-size: 18px;
+
+            }
+
+            .no-button {
+
+                left: 68%;
+
+                width: 100px;
+
+                height: 48px;
+
+                font-size: 16px;
+
+            }
+
+            .no-message {
+
+                font-size: 15px;
+
+            }
+
+            .letter {
+
+                padding:
+                    25px 18px;
+
+                font-size: 16px;
+
+                line-height: 1.8;
+
+            }
+
+            .letter-title {
+
+                font-size: 38px;
+
+            }
+
+            .signature {
+
+                font-size: 20px;
+
+            }
+
+            .song-text {
+
+                font-size: 16px;
+
+            }
+
+            .song-button {
+
+                width: 90%;
+
+                max-width: 320px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           CELULAR MUY PEQUEÑO
+        ===================================================== */
+
+        @media (max-width: 390px) {
+
+            .container {
+
+                padding:
+                    25px 12px;
+
+            }
+
+            .photo {
+
+                width: 108px;
+
+                height: 132px;
+
+                padding:
+                    6px
+                    6px
+                    21px
+                    6px;
+
+            }
+
+            .photos {
+
+                gap: 12px;
+
+            }
+
+            .question-title {
+
+                font-size: 40px;
+
+            }
+
+            .buttons {
+
+                height: 175px;
+
+            }
+
+            .yes-button {
+
+                left: 35%;
+
+                width: 95px;
+
+                height: 49px;
+
+                font-size: 17px;
+
+            }
+
+            .no-button {
+
+                left: 70%;
+
+                width: 92px;
+
+                height: 45px;
+
+                font-size: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         FONDO
+    ===================================================== -->
+
+    <div class="background">
+
+        <div class="blur blur-1"></div>
+
+        <div class="blur blur-2"></div>
+
+        <div class="blur blur-3"></div>
+
+        <div class="blur blur-4"></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTENIDO
+    ===================================================== -->
+
+    <main class="page">
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 INTRODUCCIÓN
+            ================================================== -->
+
+            <section class="intro">
+
+                <p class="intro-small">
+                    Algo que hice especialmente para ti
+                </p>
+
+                <h2 class="intro-title">
+                    Hay recuerdos que guardaría para siempre...
+                </h2>
+
+            </section>
+
+
+            <!-- =================================================
+                 FOTOS
+            ================================================== -->
+
+            <section class="photos">
+
+                <div class="photo">
+
+                    <img
+                        src="fotos/foto1.jpeg"
+                        alt="Nuestro recuerdo"
+                    >
+
+                </div>
+
+
+                <div class="photo">
+
+                    <img
+                        src="fotos/foto2.jpeg"
+                        alt="Nuestro recuerdo"
+                    >
+
+                </div>
+
+
+                <div class="photo">
+
+                    <img
+                        src="fotos/foto3.jpeg"
+                        alt="Nuestro recuerdo"
+                    >
+
+                </div>
+
+
+                <div class="photo">
+
+                    <img
+                        src="fotos/foto4.jpeg"
+                        alt="Nuestro recuerdo"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PREGUNTA
+            ================================================== -->
+
+            <section id="questionSection">
+
+                <div class="little-heart">
+                    ♡
+                </div>
+
+
+                <h1 class="question-title">
+                    ¿ME PERDONAS?
+                </h1>
+
+
+                <p class="question-subtitle">
+                    Solo hay una respuesta que espero de ti... ❤️
+                </p>
+
+
+                <!-- =============================================
+                     BOTONES
+                ============================================== -->
+
+                <div class="buttons">
+
+
+                    <button
+                        id="yesButton"
+                        class="yes-button"
+                        type="button"
+                    >
+                        SÍ ❤️
+                    </button>
+
+
+                    <button
+                        id="noButton"
+                        class="no-button"
+                        type="button"
+                    >
+                        NO 🥺
+                    </button>
+
+
+                </div>
+
+
+                <div
+                    id="noMessage"
+                    class="no-message"
+                ></div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 CARTA
+            ================================================== -->
+
+            <section id="letterSection">
+
+
+                <div class="letter-icon">
+                    💌
+                </div>
+
+
+                <h2 class="letter-title">
+                    Para ti
+                </h2>
+
+
+                <div class="letter">
+
+
+                    <p>
+                        Mi amor...
+                    </p>
+
+
+                    <p>
+                        Quiero empezar diciéndote algo muy sencillo:
+                        <strong>lo siento.</strong>
+                    </p>
+
+
+                    <p>
+                        Sé que quizás unas palabras no puedan cambiar
+                        lo que pasó, pero sí quiero que sepas que
+                        me importa muchísimo lo que tenemos.
+                    </p>
+
+
+                    <p>
+                        No quiero que un momento malo sea más grande
+                        que todos los momentos bonitos que hemos
+                        compartido.
+                    </p>
+
+
+                    <p>
+                        Gracias por cada sonrisa, cada abrazo, cada
+                        conversación y cada recuerdo que hemos creado.
+                    </p>
+
+
+                    <p>
+                        Eres una persona demasiado especial para mí
+                        y por eso hice todo esto. Quería encontrar
+                        una manera diferente de decirte algo que
+                        quizás ya debería haberte dicho antes.
+                    </p>
+
+
+                    <p>
+                        Perdóname por lo que hice y por haberte hecho
+                        sentir mal. No era lo que quería y de corazón
+                        espero que podamos estar bien nuevamente.
+                    </p>
+
+
+                    <p>
+                        Te quiero muchísimo y espero que podamos seguir
+                        escribiendo nuestra historia, con muchos más
+                        momentos bonitos por delante.
+                    </p>
+
+
+                    <p class="signature">
+                        Con todo mi amor,<br>
+                        Santiago ❤️
+                    </p>
+
+
+                </div>
+
+
+                <button
+                    id="nextButton"
+                    class="next-button"
+                    type="button"
+                >
+                    Tengo algo más para ti ❤️
+                </button>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 CANCIÓN
+            ================================================== -->
+
+            <section id="songSection">
+
+
+                <div class="song-heart">
+                    🎵
+                </div>
+
+
+                <h2 class="song-title">
+                    Stand by Me
+                </h2>
+
+
+                <p class="artist">
+                    Ben E. King ❤️
+                </p>
+
+
+                <p class="song-text">
+
+                    Hay canciones que tienen un significado
+                    especial cuando se las dedicas a alguien
+                    que realmente quieres.
+
+                    <br><br>
+
+                    Esta canción es para ti.
+
+                    <br><br>
+
+                    Porque quiero que sepas que valoro cada
+                    momento que hemos compartido y todo lo
+                    que todavía nos queda por vivir.
+
+                </p>
+
+
+                <a
+                    class="song-button"
+                    href="https://www.youtube.com/watch?v=bjWdjW20EU4&list=RDbjWdjW20EU4&start_radio=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🎧 Escuchar nuestra canción
+                </a>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        /* =====================================================
+           ELEMENTOS
+        ===================================================== */
+
+        const questionSection =
+            document.getElementById(
+                "questionSection"
+            );
+
+        const letterSection =
+            document.getElementById(
+                "letterSection"
+            );
+
+        const songSection =
+            document.getElementById(
+                "songSection"
+            );
+
+        const yesButton =
+            document.getElementById(
+                "yesButton"
+            );
+
+        const noButton =
+            document.getElementById(
+                "noButton"
+            );
+
+        const noMessage =
+            document.getElementById(
+                "noMessage"
+            );
+
+        const nextButton =
+            document.getElementById(
+                "nextButton"
+            );
+
+
+        /* =====================================================
+           CONTADOR
+        ===================================================== */
+
+        let noCount = 0;
+
+
+        /* =====================================================
+           MENSAJES
+        ===================================================== */
+
+        const messages = [
+
+            "¿Segura? 🥺",
+
+            "Piénsalo otra vez... ❤️",
+
+            "Creo que estás siendo un poquito cruel 😭",
+
+            "Mira que el SÍ está creciendo... 👀",
+
+            "Todavía puedes arrepentirte 🥺",
+
+            "Ya casi no queda botón de NO... 😭",
+
+            "¿De verdad quieres hacerme esto? ❤️",
+
+            "Creo que ya sabes cuál es la respuesta... 🥹❤️"
+
+        ];
+
+
+        /* =====================================================
+           ETAPAS
+
+           La idea aquí NO es hacer el SÍ gigantesco.
+
+           El SÍ se desplaza progresivamente hacia el NO
+           y crece de forma controlada.
+
+           En la etapa 8 prácticamente lo cubre.
+        ===================================================== */
+
+        const stages = [
+
+            /* 1 */
+            {
+                yesWidth: 130,
+                yesHeight: 58,
+                yesLeft: 40,
+                noWidth: 105,
+                noHeight: 48,
+                noLeft: 64
+            },
+
+            /* 2 */
+            {
+                yesWidth: 145,
+                yesHeight: 62,
+                yesLeft: 42,
+                noWidth: 95,
+                noHeight: 45,
+                noLeft: 62
+            },
+
+            /* 3 */
+            {
+                yesWidth: 165,
+                yesHeight: 67,
+                yesLeft: 44,
+                noWidth: 85,
+                noHeight: 42,
+                noLeft: 60
+            },
+
+            /* 4 */
+            {
+                yesWidth: 185,
+                yesHeight: 73,
+                yesLeft: 46,
+                noWidth: 75,
+                noHeight: 39,
+                noLeft: 58
+            },
+
+            /* 5 */
+            {
+                yesWidth: 210,
+                yesHeight: 80,
+                yesLeft: 48,
+                noWidth: 63,
+                noHeight: 35,
+                noLeft: 57
+            },
+
+            /* 6 */
+            {
+                yesWidth: 235,
+                yesHeight: 88,
+                yesLeft: 50,
+                noWidth: 52,
+                noHeight: 31,
+                noLeft: 57
+            },
+
+            /* 7 */
+            {
+                yesWidth: 260,
+                yesHeight: 96,
+                yesLeft: 52,
+                noWidth: 40,
+                noHeight: 27,
+                noLeft: 57
+            },
+
+            /* 8 */
+            {
+                yesWidth: 285,
+                yesHeight: 105,
+                yesLeft: 54,
+                noWidth: 23,
+                noHeight: 19,
+                noLeft: 68
+            }
+
+        ];
+
+
+        /* =====================================================
+           APLICAR ETAPA
+        ===================================================== */
+
+        function applyStage(stage) {
+
+            yesButton.style.width =
+                stage.yesWidth + "px";
+
+            yesButton.style.height =
+                stage.yesHeight + "px";
+
+            yesButton.style.left =
+                stage.yesLeft + "%";
+
+
+            noButton.style.width =
+                stage.noWidth + "px";
+
+            noButton.style.height =
+                stage.noHeight + "px";
+
+            noButton.style.left =
+                stage.noLeft + "%";
+
+        }
+
+
+        /* =====================================================
+           BOTÓN NO
+        ===================================================== */
+
+        noButton.addEventListener(
+            "click",
+            function () {
+
+
+                /*
+                 * Después del octavo NO,
+                 * cualquier intento de pulsar
+                 * el pequeño NO equivale a SÍ.
+                 */
+
+                if (noCount >= 8) {
+
+                    acceptAnswer();
+
+                    return;
+
+                }
+
+
+                noCount++;
+
+
+                const stage =
+                    stages[noCount - 1];
+
+
+                applyStage(stage);
+
+
+                noMessage.textContent =
+                    messages[noCount - 1];
+
+
+                /* =============================================
+                   OCTAVO CLIC
+                ============================================== */
+
+                if (noCount === 8) {
+
+
+                    /*
+                     * EL SÍ SE COLOCA POR DEBAJO
+                     * DEL PEQUEÑO NO.
+                     */
+
+                    yesButton.style.zIndex =
+                        "5";
+
+                    noButton.style.zIndex =
+                        "50";
+
+
+                    /*
+                     * El NO se vuelve diminuto.
+                     */
+
+                    noButton.style.width =
+                        "23px";
+
+                    noButton.style.height =
+                        "19px";
+
+
+                    noButton.style.fontSize =
+                        "7px";
+
+
+                    noButton.style.padding =
+                        "0";
+
+
+                    /*
+                     * Lo colocamos pegado al
+                     * extremo derecho del SÍ.
+                     *
+                     * Queda solamente una
+                     * pequeña pestaña visible.
+                     */
+
+                    noButton.style.left =
+                        "68%";
+
+
+                    noButton.style.top =
+                        "48%";
+
+
+                    noMessage.textContent =
+                        "Ya no te queda escapatoria... ❤️";
+
+
+                    createManyHearts();
+
+                }
+
+
+                createHeart();
+
+            }
+        );
+
+
+        /* =====================================================
+           BOTÓN SÍ
+        ===================================================== */
+
+        yesButton.addEventListener(
+            "click",
+            function () {
+
+                acceptAnswer();
+
+            }
+        );
+
+
+        /* =====================================================
+           ACEPTAR RESPUESTA
+        ===================================================== */
+
+        function acceptAnswer() {
+
+
+            createManyHearts();
+
+
+            questionSection.style.opacity =
+                "0";
+
+
+            questionSection.style.transform =
+                "translateY(-25px)";
+
+
+            setTimeout(
+                function () {
+
+
+                    questionSection.style.display =
+                        "none";
+
+
+                    letterSection.style.display =
+                        "block";
+
+
+                    window.scrollTo({
+
+                        top: 0,
+
+                        behavior:
+                            "smooth"
+
+                    });
+
+
+                    setTimeout(
+                        function () {
+
+
+                            letterSection.style.opacity =
+                                "1";
+
+
+                            letterSection.style.transform =
+                                "translateY(0)";
+
+
+                        },
+                        50
+                    );
+
+
+                },
+                700
+            );
+
+        }
+
+
+        /* =====================================================
+           BOTÓN SIGUIENTE
+        ===================================================== */
+
+        nextButton.addEventListener(
+            "click",
+            function () {
+
+
+                createManyHearts();
+
+
+                letterSection.style.opacity =
+                    "0";
+
+
+                letterSection.style.transform =
+                    "translateY(-25px)";
+
+
+                setTimeout(
+                    function () {
+
+
+                        letterSection.style.display =
+                            "none";
+
+
+                        songSection.style.display =
+                            "block";
+
+
+                        window.scrollTo({
+
+                            top: 0,
+
+                            behavior:
+                                "smooth"
+
+                        });
+
+
+                        setTimeout(
+                            function () {
+
+
+                                songSection.style.opacity =
+                                    "1";
+
+
+                            },
+                            50
+                        );
+
+
+                    },
+                    700
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           CREAR CORAZÓN
+        ===================================================== */
+
+        function createHeart() {
+
+
+            const heart =
+                document.createElement(
+                    "div"
+                );
+
+
+            heart.className =
+                "floating-heart";
+
+
+            const symbols = [
+                "♡",
+                "♥",
+                "❤"
+            ];
+
+
+            heart.textContent =
+                symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                ];
+
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            heart.style.top =
+                "100vh";
+
+
+            heart.style.fontSize =
+                (15 + Math.random() * 22) + "px";
+
+
+            heart.style.color =
+                Math.random() > 0.5
+                    ? "#e59ab5"
+                    : "#9dc9e8";
+
+
+            heart.style.animationDuration =
+                (4 + Math.random() * 4) + "s";
+
+
+            document.body.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                function () {
+
+                    heart.remove();
+
+                },
+                8500
+            );
+
+        }
+
+
+        /* =====================================================
+           MUCHOS CORAZONES
+        ===================================================== */
+
+        function createManyHearts() {
+
+
+            for (
+                let i = 0;
+                i < 35;
+                i++
+            ) {
+
+
+                setTimeout(
+                    function () {
+
+                        createHeart();
+
+                    },
+                    i * 80
+                );
+
+            }
+
+        }
+
+
+        /* =====================================================
+           CORAZONES DE FONDO
+        ===================================================== */
+
+        function createBackgroundHeart() {
+
+
+            const heart =
+                document.createElement(
+                    "div"
+                );
+
+
+            heart.className =
+                "background-heart";
+
+
+            heart.textContent =
+                Math.random() > 0.5
+                    ? "♡"
+                    : "♥";
+
+
+            heart.style.position =
+                "fixed";
+
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            heart.style.top =
+                "100vh";
+
+
+            heart.style.fontSize =
+                (12 + Math.random() * 16) + "px";
+
+
+            heart.style.color =
+                "rgba(214,126,157,0.22)";
+
+
+            heart.style.animation =
+                "floatUp " +
+                (8 + Math.random() * 6) +
+                "s linear forwards";
+
+
+            heart.style.pointerEvents =
+                "none";
+
+
+            heart.style.zIndex =
+                "0";
+
+
+            document.body.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                function () {
+
+                    heart.remove();
+
+                },
+                15000
+            );
+
+        }
+
+
+        setInterval(
+            createBackgroundHeart,
+            2800
+        );
+
+    </script>
+
+</body>
+
+</html>
